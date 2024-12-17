@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Navbar Styles */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  background-color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 25px;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: none;
+}
+
+.navbar-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar-menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 1919px) {
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-menu-desktop {
+    display: none;
+  }
+
+  .navbar-search-desktop {
+    display: none;
+  }
+
+  .navbar-search-mobile {
+    text-align: center;
+  }
+
+  .navbar-search-mobile input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 90%;
+  }
+
+  .navbar-menu-mobile {
+    display: block;
+    background-color: #333;
+    width: 15%;
+  }
+
+  .navbar-menu-mobile ul li {
+    text-align: center;
+    padding: 25px;
+  }
+
+  .hamburger-icon, .close-icon {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-search-mobile {
+    display: none;
+  }
+
+  .navbar-menu-mobile {
+    display: none;
+  }
+
+  .navbar-search-desktop input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .navbar-menu-desktop {
+    display: block;
+    background-color: #333;
+    width: 100%;
+    padding-left: 15px;
+  }
+
+  .navbar-menu-desktop ul li {
+    text-align: center;
+    display: inline;
+    margin-right: 10px;
+  }
+
+  .hamburger-icon, .close-icon {
+    font-size: 24px;
+  }
+}
