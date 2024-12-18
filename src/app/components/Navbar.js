@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ noNav = false }) {
   const [isOpen, setIsOpen] = useState(false);
 
   // Toggle function to open/close the navbar
@@ -17,28 +17,29 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           {/* Hamburger Icon */}
-          <div className="navbar-toggle" onClick={toggleNavbar}>
-            {isOpen ? (
-              <span className="close-icon">X</span> // Close icon when navbar is open
-            ) : (
-              <span className="hamburger-icon">&#9776;</span> // Hamburger icon when navbar is closed
-            )}
-          </div>
+          {!noNav &&
+            <div className="navbar-toggle" onClick={toggleNavbar}>
+              {isOpen ? (
+                <span className="close-icon">X</span> // Close icon when navbar is open
+              ) : (
+                <span className="hamburger-icon">&#9776;</span> // Hamburger icon when navbar is closed
+              )}
+            </div>
+          }
 
-          <div className="navbar-menu-desktop">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-
-
-          {/* Search Input */}
-          <div className="navbar-search-desktop">
-            <input type="text" placeholder="Search..." />
-          </div>
+          {!noNav &&
+            <>
+              <div className="navbar-menu-desktop">
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/login">Login</a></li>
+                </ul>
+              </div>
+              <div className="navbar-search-desktop">
+                <input type="text" placeholder="Search..." />
+              </div>
+            </>
+          }
 
         </div>
 
@@ -52,10 +53,8 @@ export default function Navbar() {
             <input type="text" placeholder="Search..." />
           </div>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
           </ul>
         </div>
       )}

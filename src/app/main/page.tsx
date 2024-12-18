@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Navbar from './components/Navbar.js';
+import Navbar from '../components/Navbar.js';
 
-export default function Home() {
+export default function Main() {
   return (
     <div>
       <Navbar />
