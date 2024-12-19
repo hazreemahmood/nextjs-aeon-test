@@ -83,42 +83,46 @@ export default function Home() {
     <>
 
       <Navbar />
-      <div style={{ maxWidth: 400, margin: '0 auto', padding: 20 }}>
-        <h1>Login</h1>
-        <form onSubmit={handleSubmit}>
+      <div className="flex justify-center">
+        <div className="max-w-xl py-6 px-8 mt-20 ml-100 bg-white rounded shadow-xl">
+          <h1 style={{ color: 'black' }}>Login</h1>
+          <form onSubmit={handleSubmit}>
 
-          <div className="col-span-full">
-            <div className="mt-2 flex items-center gap-x-3">
+            <div className="col-span-full">
+              <div className="mt-2 flex items-center gap-x-3">
+                <div style={{ marginBottom: 10 }}>
+                  <label className="block text-gray-800 font-bold">Username:</label>
+                  <input
+                    type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    required
+                    style={{ width: '100%', padding: 8 }}
+                    className="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600"
+                  />
+                </div>
+                <span className='pt-5' style={{ color: 'black' }}>
+                  {secureWord}
+                </span>
+              </div>
+            </div>
+            {showPassword &&
               <div style={{ marginBottom: 10 }}>
-                <label>Username</label>
+                <label className="block text-gray-800 font-bold">Password</label>
                 <input
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                   style={{ width: '100%', padding: 8 }}
+                  className="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600"
                 />
               </div>
-              <span>
-                {secureWord}
-              </span>
-            </div>
-          </div>
-          {showPassword &&
-            <div style={{ marginBottom: 10 }}>
-              <label>Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                style={{ width: '100%', padding: 8 }}
-              />
-            </div>
-          }
-          {error && <div style={{ color: 'red', marginBottom: 10 }}>{error}</div>}
-          <LoginButton secureWord={secureWord} showPassword={showPassword} />
-        </form>
+            }
+            {error && <div style={{ color: 'red', marginBottom: 10 }}>{error}</div>}
+            <LoginButton secureWord={secureWord} showPassword={showPassword} />
+          </form>
+        </div>
       </div>
     </>
   );

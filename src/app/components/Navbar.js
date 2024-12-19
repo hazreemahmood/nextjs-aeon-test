@@ -31,8 +31,8 @@ export default function Navbar({ noNav = false }) {
             <>
               <div className="navbar-menu-desktop">
                 <ul>
-                  <li><a href="/">Home</a></li>
                   <li><a href="/login">Login</a></li>
+                  <li><a href="/">Home</a></li>
                 </ul>
               </div>
               <div className="navbar-search-desktop">
@@ -53,8 +53,8 @@ export default function Navbar({ noNav = false }) {
             <input type="text" placeholder="Search..." />
           </div>
           <ul>
-            <li><a href="/">Home</a></li>
             <li><a href="/login">Login</a></li>
+            <li><a href="/">Home</a></li>
           </ul>
         </div>
       )}
