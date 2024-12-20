@@ -24,6 +24,14 @@ to install any packages that was miss.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You try logging in using any the credential below
+
+username: <any>
+password: pass123
+
+If password is wrong an alert will popup "Wrong Password".
+If password is correct an alert will popup "Login Succcesful" and redirect to another page
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
