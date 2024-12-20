@@ -24,22 +24,14 @@ to install any packages that was miss.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You try logging in using any the credential below
 
-If password is wrong an alert will popup "Wrong Password".
-If password is correct an alert will popup "Login Succcesful" and redirect to another page
+## Login
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
+You try logging in using any the credential below:
 
 - username: (any username)
 - password: pass123
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If password is wrong an alert will popup "Wrong Password".
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If password is correct an alert will popup "Login Succcesful" and redirect to another page
