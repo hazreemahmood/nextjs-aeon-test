@@ -2,7 +2,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Please Run 
+
+```bash
+npm install
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
@@ -14,11 +20,6 @@ pnpm dev
 bun dev
 ```
 
-If you encounter an issue / error, please run 
-
-```bash
-npm install
-```
 
 to install any packages that was miss.
 
