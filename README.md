@@ -20,7 +20,7 @@ If you encounter an issue / error, please run
 npm install
 ```
 
-to install any that was miss packages.
+to install any packages that was miss.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
