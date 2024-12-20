@@ -8,6 +8,8 @@ Please Run
 npm install
 ```
 
+to install any packages that was miss.
+
 Then run the development server:
 
 ```bash
@@ -20,8 +22,6 @@ pnpm dev
 bun dev
 ```
 
-
-to install any packages that was miss.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
